@@ -1,0 +1,63 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fff;
+  color: #4b4b4b;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #f8f4f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #a47148;
+}
+
+a {
+  color: #a47148;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+button {
+  background-color: #e8cfc2;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #d3b5a3;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fafafa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
