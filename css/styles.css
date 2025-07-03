@@ -8,7 +8,6 @@ body {
 
 header, footer {
   background-color: #f8f4f0;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -45,19 +44,34 @@ button:hover {
   background-color: #d3b5a3;
 }
 
-input, textarea {
-  padding: 0.7rem;
-  width: 100%;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f4f0;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-form {
-  max-width: 600px;
-  margin: auto;
-  background-color: #fafafa;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #a47148;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #a47148;
+  font-weight: 500;
 }
