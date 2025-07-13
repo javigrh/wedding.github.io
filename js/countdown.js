@@ -1,19 +1,24 @@
-const countdown = () => {
-  const eventDate = new Date("May 23, 2026 17:00:00").getTime();
-  const now = new Date().getTime();
-  const distance = eventDate - now;
 
-  if (distance < 0) {
-    document.getElementById("timer").innerHTML = "¡Ya ha llegado el gran día!";
-    return;
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const countdown = () => {
+    const eventDate = new Date("2026-05-10T17:00:00").getTime();
+    const now = new Date().getTime();
+    const diff = eventDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    if (diff <= 0) {
+      document.getElementById("timer").innerHTML = "¡Hoy es el gran día!";
+      return;
+    }
 
-  document.getElementById("timer").innerHTML = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-};
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
-setInterval(countdown, 1000);
+    document.getElementById("timer").innerHTML = 
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+  };
+
+  countdown();
+  setInterval(countdown, 1000);
+});

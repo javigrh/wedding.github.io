@@ -1,14 +1,10 @@
+
 body {
   font-family: 'Georgia', serif;
   background-color: #fff;
   color: #4b4b4b;
   margin: 0;
   padding: 0;
-}
-
-header, footer {
-  background-color: #f8f4f0;
-  text-align: center;
 }
 
 h1, h2, h3 {
@@ -28,6 +24,7 @@ a:hover {
   padding: 3rem 1rem;
   max-width: 900px;
   margin: auto;
+  margin-left: 240px;
 }
 
 button {
@@ -44,35 +41,60 @@ button:hover {
   background-color: #d3b5a3;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f4f0;
-  padding: 1rem 2rem;
-  position: sticky;
+/* Sidebar */
+.sidebar {
+  position: fixed;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.navbar .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #a47148;
-}
-
-.navbar ul {
-  list-style: none;
+  left: -220px;
+  width: 220px;
+  height: 100%;
+  background-color: #7a5a3d;
+  padding-top: 2rem;
+  transition: left 0.3s ease;
   display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  z-index: 150;
 }
 
-.navbar ul li a {
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar a {
+  color: white;
+  padding: 1rem 2rem;
   text-decoration: none;
-  color: #a47148;
-  font-weight: 500;
+  font-size: 1.1rem;
 }
 
+.sidebar a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Hamburger menu */
+.menu-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.menu-btn .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #7a5a3d;
+  transition: all 0.3s ease;
+}
