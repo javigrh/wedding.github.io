@@ -1,18 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
+
 body {
-  font-family: 'Georgia', serif;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
   background-color: #e0f7f1;
   color: #3b4a49;
-  margin: 0;
-  padding: 0;
 }
 
 h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
   color: #378a74;
 }
 
 a {
-  color: #a47148;
+  color: #378a74;
   text-decoration: none;
 }
 
@@ -22,8 +24,7 @@ a:hover {
 
 .section {
   padding: 3rem 1rem;
-  max-width: 900px;
-  margin: auto;
+  max-width: 1000px;
   margin-left: 240px;
 }
 
@@ -79,7 +80,7 @@ button:hover {
   background-color: rgba(255,255,255,0.1);
 }
 
-/* Hamburger menu */
+/* Menu button */
 .menu-btn {
   position: fixed;
   top: 1rem;
@@ -95,6 +96,29 @@ button:hover {
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: #7a5a3d;
-  transition: all 0.3s ease;
+  background-color: #378a74;
+}
+
+.hero-img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.map-embed {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.digital-clock {
+  font-size: 2rem;
+  font-family: 'Courier New', monospace;
+  background: #b3e5dc;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
 }

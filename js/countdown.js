@@ -1,24 +1,25 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const countdown = () => {
-    const eventDate = new Date("2026-05-10T17:00:00").getTime();
+  const eventDate = new Date("2026-05-10T17:00:00").getTime();
+
+  function updateClock() {
     const now = new Date().getTime();
     const diff = eventDate - now;
 
     if (diff <= 0) {
-      document.getElementById("timer").innerHTML = "¡Hoy es el gran día!";
+      document.getElementById("digital-clock").innerHTML = "¡Ha llegado el gran día!";
       return;
     }
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
 
-    document.getElementById("timer").innerHTML = 
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-  };
+    document.getElementById("digital-clock").innerHTML =
+      `${d}d ${h}h ${m}m ${s}s`;
+  }
 
-  countdown();
-  setInterval(countdown, 1000);
+  updateClock();
+  setInterval(updateClock, 1000);
 });
