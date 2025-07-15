@@ -5,22 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Miriam & Miguel</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/countdown.js"></script>
-  <script defer src="js/menu.js"></script>
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   
-<button class="menu-btn">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
-
-<div class="sidebar">
-  <div class="logo">Miriam & Miguel</div>
-  <a href="index.html">Inicio</a>
-  <a href="sevilla.html">Qué ver en Sevilla</a>
-  <a href="formulario.html">Confirmar asistencia</a>
+<div class="navbar">
+  <h1>Miriam & Miguel</h1>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="sevilla.html">Sevilla</a>
+    <a href="formulario.html">Confirmar</a>
+  </div>
 </div>
 
 
@@ -33,16 +28,34 @@
 
   <section class="section">
     <h2>Ceremonia</h2>
-    <p>Iglesia de San Luis, 17:00</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.6293911092184!2d-5.9906853884746605!3d37.398412533634236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c013419219f%3A0xf34aa89a8879e662!2sConjunto%20Monumental%20de%20San%20Luis%20de%20los%20Franceses!5e1!3m2!1ses!2ses!4v1752515529620!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
-    <img src="img/iglesia.jpg" alt="Iglesia" class="hero-img"/>
+    <div class="two-column">
+      <div class="left">
+        <p>Iglesia de San Luis, 17:00</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.6293911092184!2d-5.9906853884746605!3d37.398412533634236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c013419219f%3A0xf34aa89a8879e662!2sConjunto%20Monumental%20de%20San%20Luis%20de%20los%20Franceses!5e1!3m2!1ses!2ses!4v1752515529620!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+      </div>
+      <div class="right">
+        <div class="carousel">
+          <img src="img/iglesia.jpg" alt="Iglesia" class="active"/>
+          <img src="img/iglesia2.jpg" alt="Iglesia 2"/>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="section">
     <h2>Celebración</h2>
-    <p>Hacienda El Rosario, 19:30</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.566480222816!2d-5.913317688475468!3d37.37773148481539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126f5e50a0e86b%3A0xe7e7eeedd54fa646!2sHacienda%20del%20Rosario!5e1!3m2!1ses!2ses!4v1752515592594!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <img src="img/hacienda.jpg" alt="Hacienda" class="hero-img"/>
+    <div class="two-column">
+      <div class="left">
+        <p>Hacienda El Rosario, 19:30</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.566480222816!2d-5.913317688475468!3d37.37773148481539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126f5e50a0e86b%3A0xe7e7eeedd54fa646!2sHacienda%20del%20Rosario!5e1!3m2!1ses!2ses!4v1752515592594!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="right">
+        <div class="carousel">
+          <img src="img/hacienda.jpg" alt="Hacienda" class="active"/>
+          <img src="img/hacienda2.jpg" alt="Hacienda 2"/>
+        </div>
+      </div>
+    </div>
   </section>
 </body>
 </html>
